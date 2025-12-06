@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KabyBOT</title>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+    /* ---------------------- RESET ---------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #020B3F 0%, #0A0F1D 100%);
+      color: white;
+      padding-bottom: 120px;
+      transition: background 0.4s, color 0.3s;
+    }
+
+    /* ---------------------- HEADER ---------------------- */
+    .site-header {
+      width: 100%;
+      height: 150px;
+      background: #0A0F1D;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      border-bottom-left-radius: 22px;
+      border-bottom-right-radius: 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+    }
+
+    .logo-text {
+      font-size: 42px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #4a6cff, #7da2ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
+    }
+
+    .header-avatar img {
+      width: 100px;
+      border-radius: 18px;
+      border: 3px solid #4a6cff;
+      box-shadow: 0 0 14px rgba(0,0,0,0.5);
+    }
+
+    /* ---------------------- CONTEÚDO ---------------------- */
+    main {
+      width: 92%;
+      max-width: 1100px;
+      margin: 35px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 18px rgba(0,0,0,0.4);
+    }
+
+    .command-title {
+      font-weight: 600;
+      margin: 20px 0 10px;
+      color: #b7cdff;
+      font-size: 18px;
+    }
+
+    .command {
+      margin: 6px 0;
+      padding-left: 10px;
+      border-left: 3px solid #4a6cff;
+    }
+
+    /* ---------------------- BOTÃO FLUTUANTE ---------------------- */
+    .fab-container {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 999;
+    }
+
+    .fab-main {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #4a6cff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 0 14px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .fab-main:hover {
+      transform: scale(1.1);
+    }
+
+    .fab-avatar {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .fab-menu {
+      display: none;
+      position: absolute;
+      bottom: 72px;
+      right: 0;
+      background: #0A0F1D;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 14px rgba(0,0,0,0.4);
+      animation: fadeIn 0.25s ease;
+    }
+
+    .fab-item {
+      margin: 10px 0;
+      padding: 8px 14px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.07);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .fab-item:hover {
+      background: rgba(255,255,255,0.16);
+      transform: translateX(-4px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- -------------------------------- HEADER -------------------------------- -->
+<header class="site-header">
+  <div>
+    <div class="logo-text">KabyBOT</div>
+    <div style="color:rgba(255,255,255,0.85); font-weight:600; margin-top:6px">
+      Seu bot favorito (eu acho)
+    </div>
+  </div>
+
+  <div class="header-avatar">
+    <img src="avatar.png" alt="avatar do KabyBOT">
+  </div>
+</header>
+
+<!-- -------------------------------- CONTEÚDO -------------------------------- -->
+<main>
+
+  <section class="card">
+    <h1>Detalhes Rápidos</h1>
+    <div style="
+      font-size:14px;
+      line-height:1.55;
+      color:#d7e5ff;
+      background:rgba(255,255,255,0.05);
+      padding:14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.08);
+    ">
+      <p><strong style="color:#7da2ff;">Olá! Sou o KabyBOT (eu acho)</strong></p><br>
+
+      <p>💸 Jogue caça-níqueis com Kabyzitos — porque dinheiro virtual é a única coisa que você vai ganhar aqui.</p><br>
+
+      <p>📅 Pegue seu <strong>daily</strong> — se tiver sorte, ganha.  
+      Se não tiver… também ganha, só que menos.</p><br>
+
+      <p>🤖 Um bot feito pra quem não tem nada melhor pra fazer  
+      (tipo o próprio Kaby). <i>(é meme)</i></p>
+    </div>
+  </section>
+
+  <!-- ---------------------- COMANDOS ---------------------- -->
+  <section class="card">
+    <h1>Comandos</h1>
+
+    <div class="command-title">💰 Economia & Perfil</div>
+    <div class="command">/daily — Resgate seus Kabyzitos diários.</div>
+    <div class="command">/saldo — Veja seu saldo atual.</div>
+    <div class="command">/pay &lt;usuário&gt; &lt;valor&gt; — Envie Kabyzitos.</div>
+    <div class="command">/slot &lt;valor&gt; — Jogue caça-níqueis.</div>
+    <div class="command">/coinflip &lt;usuário&gt; &lt;valor&gt; — Cara ou coroa.</div>
+    <div class="command">/guessnumber &lt;aposta&gt; — Adivinhe o número.</div>
+    <div class="command">/top — Ranking dos mais ricos.</div>
+    <div class="command">/profile — Seu perfil.</div>
+    <div class="command">/vip — Informações do VIP.</div>
+    <div class="command">/vipcomprar — Comprar VIP.</div>
+
+    <div class="command-title">🛠️ Staff — Moderação</div>
+    <div class="command">/ban &lt;usuário&gt; [motivo] — Banir.</div>
+    <div class="command">/unban &lt;user_id&gt; — Desbanir.</div>
+    <div class="command">/mute &lt;usuário&gt; &lt;tempo&gt; — Mutar.</div>
+    <div class="command">/unmute — Desmutar.</div>
+    <div class="command">/warn — Aplicar warn.</div>
+
+    <div class="command-title">📌 Observações</div>
+    <div class="command">⏱️ Cooldown global de 5 segundos.</div>
+    <div class="command">📤 Ações de moderação são registradas.</div>
+  </section>
+
+</main>
+
+<!-- ---------------------- BOTÃO FLUTUANTE ---------------------- -->
+<div class="fab-container">
+  <div class="fab-main" onclick="toggleFab()">
+    <img src="avatar.png" class="fab-avatar">
+  </div>
+
+  <div class="fab-menu" id="fabMenu">
+    <div class="fab-item" onclick="window.open('https://discord.com/oauth2/authorize?client_id=1434942430976671845', '_blank')">
+      ➕ Adicionar Bot
+    </div>
+    <div class="fab-item" onclick="window.open('https://discord.gg/U7y6vpacVr', '_blank')">
+      💬 Servidor de Suporte
+    </div>
+    <div class="fab-item" onclick="window.scrollTo({ top:0, behavior:'smooth' })">
+      ⬆️ Voltar ao topo
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleFab() {
+    const menu = document.getElementById("fabMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
